@@ -5,6 +5,7 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  workflow_dispatch: # Tambahkan ini untuk memungkinkan pemicuan manual
 
 jobs:
   build:
@@ -12,9 +13,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Debug Info
-      run: echo "Running Android CI workflow"
-      
     - uses: actions/checkout@v4
 
     - name: set up JDK 11
